@@ -32,7 +32,7 @@ const Quiz = ({teamName, points, setPoints}) => {
 
         console.log(response.data)
         setQuestions(response.data.qarray);
-       setTimeToAnswer(response.data.remainingTime)
+       setTimeToAnswer(response.data.remainingTime);
       })
       .catch(error => {
         console.error('Error fetching questions:', error);
@@ -85,6 +85,7 @@ const Quiz = ({teamName, points, setPoints}) => {
       }, 1000);
     } else if (!isAnswered) {
       setResultMessage('Time is up!');
+      axios.put("https://vigorous-knee-production.up.railway.app/attempt/endAttempt", {'teamName':teamName}).then((response)=>{console.log("Put success")}).catch((error)=>{console.log(error)})
       // setIsAnswered(true);
       navigate('/end');
       
