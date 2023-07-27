@@ -53,12 +53,13 @@ const StartPage = ({ teams, setTeamName }) => {
       })
       .then(function (response) {
         console.log("Success");
+        navigator('/quiz');
       })
       .catch(function (error) {
         console.log(error);
       });
       sleep(1000);
-      navigator('/quiz');
+      
     }
   };
 
