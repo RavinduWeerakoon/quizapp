@@ -30,7 +30,7 @@ const Quiz = ({teamName, points, setPoints}) => {
     axios.get(`https://vigorous-knee-production.up.railway.app/question/getQuestion/${teamName}`) 
       .then(response => {
 
-        console.log(response.data)
+        
         setQuestions(response.data.qarray);
        setTimeToAnswer(response.data.remainingTime);
       })
