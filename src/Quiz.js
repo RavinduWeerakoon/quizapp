@@ -109,9 +109,10 @@ const Quiz = ({teamName, points, setPoints}) => {
 
         {currentQuestion != 4 ?(
       <div>
+      {currentQues.url?(
       <div>
-          <img src={currentQues.URL} alt="image" style={{objectFit:"cover", width:"100%"}} class="my-2"/>
-      </div>
+          <img src={currentQues.url} alt="image" style={{objectFit:"cover", width:"100%"}} class="my-2"/>
+      </div>):(null)}
 
       <p class="mt-3">{currentQues.description}</p>
       
@@ -127,7 +128,7 @@ const Quiz = ({teamName, points, setPoints}) => {
     </div>
       ):(<>
       <p>{currentQues.description}</p>
-      <Counters userAnswer={userAnswer} setUserAnswer = {setUserAnswer} URL={currentQues.URL}/></>)}  
+      <Counters userAnswer={userAnswer} setUserAnswer = {setUserAnswer} url={currentQues.url}/></>)}  
 
       
       {!isAnswered ?( 

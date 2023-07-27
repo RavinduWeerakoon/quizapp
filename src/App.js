@@ -44,7 +44,7 @@ const App = () => {
             <Route path="/quiz" element={<Quiz teamName={teamName} points={points} setPoints={() => incrementPoints()}/>}/>
             
             <Route path="/end" element={<EndPage teamName={teamName} points={points}/>}/>
-            <Route path='/counter' element={<Counters setUserAnswer={setUserAnswer} userAnswer={userAnswer} URL={"https://assets.coderrocketfuel.com/pomodoro-times-up.mp3"}/>}/>
+            <Route path='/counter' element={<Counters setUserAnswer={setUserAnswer} userAnswer={userAnswer} url={"https://voca.ro/1aMjzvOZEEPV"}/>}/>
             <Route path='/leaderboard' element={<Leaderboard/>}/>
               
             

@@ -15,7 +15,7 @@ import s7 from "../sounds/7.mp3";
 import s8 from "../sounds/8.mp3";
 import s9 from "../sounds/9.mp3";
 
-const Counters = ({setUserAnswer, userAnswer, URL}) => {
+const Counters = ({setUserAnswer, userAnswer, url}) => {
   const [p, setP] = useState("");
   const audioFiles = {
     0: s0,
@@ -88,16 +88,7 @@ const Counters = ({setUserAnswer, userAnswer, URL}) => {
       </button>  */}
 
       <div>
-        <audio className="audio-element">
-          <source src={URL}></source>
-        </audio>
-        <button
-          class="play"
-          onClick={playAudio}
-          style={playButtonStyle}
-        >
-          <i class="fas fa-play-circle"></i>
-        </button>
+      <div><iframe width="300" height="60" src={url.replace("https://voca.ro", "https://vocaroo.com/embed")} frameborder="0" allow="autoplay"></iframe><br/><a href="https://voca.ro/1aMjzvOZEEPV" title="Vocaroo Voice Recorder" target="_blank">View on Vocaroo &gt;&gt;</a></div>
       </div>
       <div class="mx-auto">
         <input
@@ -188,12 +179,13 @@ const Counters = ({setUserAnswer, userAnswer, URL}) => {
             9
           </button>
         </div>
+        <div class="d-flex justify-content-center">
         <button
           onClick={handdeleteNum}
           className="btn btn-primary m-2"
           style={buttonStyle}
         >
-          del
+          X
         </button>
         <button
           id={0}
@@ -204,6 +196,7 @@ const Counters = ({setUserAnswer, userAnswer, URL}) => {
           0
         </button>
         <button className="btn btn-primary m-2" style={buttonStyle}></button>
+        </div>
       </div>
     </div>
   );
