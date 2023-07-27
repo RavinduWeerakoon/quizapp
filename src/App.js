@@ -15,7 +15,7 @@ import './Buttons.css';
 
 const App = () => {
   const [teamName, setTeamName] = useState('');
-  const[isTimeout,setIsTimeout]=useState(false);
+  
   const[points,setPoints]=useState(0);
   const[userAnswer,setUserAnswer]=useState(false);
   const incrementPoints = () => {

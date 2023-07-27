@@ -25,7 +25,7 @@ const Quiz = ({teamName, points, setPoints}) => {
     
  
   // Fetch questions from the server
-  useEffect(() => {
+  
     
     axios.get(`https://vigorous-knee-production.up.railway.app/question/getQuestion/${teamName}`) 
       .then(response => {
@@ -42,8 +42,7 @@ const Quiz = ({teamName, points, setPoints}) => {
 
     // setQuestions([{description: "What is the capital of France?", correctAnswer: "Paris", URL:"", revealLetter:"a"},
     //               {description: "What is the capital of France?", correctAnswer: "Paris", URL:"", revealLetter:"a"}]);
-    }, [unchanged]);
-
+    
   // Function to handle user's answer submission
   const handleAnswerSubmit = () => {
     const currentQues = questions[currentQuestion];
